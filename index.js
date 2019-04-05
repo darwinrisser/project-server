@@ -6,9 +6,9 @@ mongoose.connect(process.env.mongodburi, {useNewUrlParser: true});
 const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.json());
-const ProjectRoutes = require("./routes/ProjectRoutes");
+const UserRoutes = require("./routes/UserRoutes");
 
-app.use(ProjectRoutes);
+app.use(UserRoutes);
 
 app.listen(3001, (err) => {
  if (err) {
