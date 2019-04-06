@@ -1,4 +1,4 @@
-const Project = require("../models/UserModel");
+const User = require("../models/UserModel");
 
 exports.list = function list(request, response) {
     User.find().exec().then((users)=>{

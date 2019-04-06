@@ -10,10 +10,9 @@ const UserRoutes = require("./routes/UserRoutes");
 
 app.use(UserRoutes);
 
-app.listen(3001, (err) => {
- if (err) {
-   return console.log("Error", err);
- }
- console.log("Web server is now listening for messages", err);
-});
- 
+app.listen(process.env.PORT || 3000, (err) => {
+  if (err) {
+    return console.log("Error", err);
+  }
+  console.log("Web server is now listening for messages", err);
+ });
